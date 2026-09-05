@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Cat Higher or Lower
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <main class="game">
+
+        <h1>
+            🐱 Cat Higher or Lower
+        </h1>
+
+
+        <!-- =========================================
+             MAIN MENU
+        ========================================== -->
+
+        <div
+            id="mode-selection"
+            class="screen"
+        >
+
+            <p class="intro">
+                Which cat weighs more?
+            </p>
+
+
+            <button
+                id="daily-mode-button"
+                class="mode-button"
+            >
+                🗓️ Daily Challenge
+
+                <span>
+                    10 questions every day
+                </span>
+            </button>
+
+
+            <button
+                id="infinite-mode-button"
+                class="mode-button"
+            >
+                ♾️ Infinite Mode
+
+                <span>
+                    Play for as long as you want
+                </span>
+            </button>
+
+
+            <button
+                id="collection-button"
+                class="mode-button"
+            >
+                🐾 Cat Collection
+
+                <span id="collection-count">
+                    0 / 100 cats discovered
+                </span>
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================================
+             GAME SCREEN
+        ========================================== -->
+
+        <div
+            id="game-screen"
+            class="screen hidden"
+        >
+
+            <div class="game-info">
+
+                <div id="question-number">
+                    Question 1 / 10
+                </div>
+
+
+                <div>
+                    🔥 Streak:
+                    <span id="streak">
+                        0
+                    </span>
+                </div>
+
+            </div>
+
+
+            <p class="question">
+                Which cat weighs more?
+            </p>
+
+
+            <div class="cats">
+
+
+                <!-- CAT 1 -->
+
+                <div class="cat-card">
+
+                    <img
+                        id="cat1-image"
+                        src="images/cat1.jpg"
+                        alt="Cat 1"
+                    >
+
+
+                    <h2 id="cat1-name">
+                        Cat 1
+                    </h2>
+
+
+                    <button
+                        id="cat1-button"
+                        class="cat-button"
+                    >
+                        Choose this cat
+                    </button>
+
+                </div>
+
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+
+                <!-- CAT 2 -->
+
+                <div class="cat-card">
+
+                    <img
+                        id="cat2-image"
+                        src="images/cat2.jpg"
+                        alt="Cat 2"
+                    >
+
+
+                    <h2 id="cat2-name">
+                        Cat 2
+                    </h2>
+
+
+                    <button
+                        id="cat2-button"
+                        class="cat-button"
+                    >
+                        Choose this cat
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="result"></p>
+
+
+
+            <button
+                id="next-button"
+                class="next-button hidden"
+            >
+                Next Question
+            </button>
+
+
+
+            <button
+                id="quit-button"
+                class="secondary-button"
+            >
+                Back to Menu
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================================
+             DAILY RESULTS SCREEN
+        ========================================== -->
+
+        <div
+            id="results-screen"
+            class="screen hidden"
+        >
+
+            <h2>
+                🎉 Daily Challenge Complete!
+            </h2>
+
+
+            <p class="final-score">
+                You scored
+            </p>
+
+
+            <div id="final-score">
+                0 / 10
+            </div>
+
+
+            <p id="final-message"></p>
+
+
+            <div id="answer-history"></div>
+
+
+
+            <!-- =====================================
+                 DAILY CAT REWARD
+            ====================================== -->
+
+            <div id="cat-of-the-day">
+
+                <h2>
+                    🎁 Your Daily Cat!
+                </h2>
+
+
+                <p class="cat-unlocked">
+                    You unlocked a new cat!
+                </p>
+
+
+                <p id="daily-cat-rarity">
+                </p>
+
+
+                <img
+                    id="daily-cat-image"
+                    src=""
+                    alt="Daily Cat"
+                >
+
+
+                <h3 id="daily-cat-name">
+                    Cat Name
+                </h3>
+
+
+                <p id="daily-cat-weight">
+                    0 kg
+                </p>
+
+
+                <p id="daily-cat-message">
+                    Meow!
+                </p>
+
+
+                <p id="daily-cat-collection-message">
+                </p>
+
+            </div>
+
+
+
+            <button
+                id="play-infinite-button"
+                class="mode-button"
+            >
+                ♾️ Play Infinite Mode
+            </button>
+
+
+
+            <button
+                id="menu-button"
+                class="secondary-button"
+            >
+                Back to Menu
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================================
+             CAT COLLECTION SCREEN
+        ========================================== -->
+
+        <div
+            id="collection-screen"
+            class="screen hidden"
+        >
+
+            <h2>
+                🐾 Cat Collection
+            </h2>
+
+
+            <p id="collection-progress">
+                0 / 100 cats discovered
+            </p>
+
+
+            <div id="collection-grid">
+            </div>
+
+
+            <button
+                id="collection-menu-button"
+                class="secondary-button"
+            >
+                Back to Menu
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>

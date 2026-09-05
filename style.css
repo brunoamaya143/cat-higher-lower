@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f7f1e8;
+
+    color: #333;
+}
+
+
+.game {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.screen {
+    width: 100%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* ----------------------------- */
+/* MENU */
+/* ----------------------------- */
+
+
+.intro {
+    font-size: 24px;
+
+    margin-bottom: 30px;
+}
+
+
+.mode-button {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 15px auto;
+
+    padding: 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.15s;
+}
+
+
+.mode-button:hover {
+    transform: translateY(-3px);
+}
+
+
+.mode-button span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 15px;
+
+    font-weight: normal;
+
+    color: #777;
+}
+
+
+/* ----------------------------- */
+/* GAME INFO */
+/* ----------------------------- */
+
+
+.game-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+.question {
+    font-size: 26px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ----------------------------- */
+/* CAT CARDS */
+/* ----------------------------- */
+
+
+.cats {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.cat-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    width: 380px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.cat-card img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    background: #f2f2f2;
+}
+
+
+.cat-card h2 {
+    font-size: 26px;
+
+    margin: 15px 0;
+}
+
+
+.cat-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #ffb84d;
+}
+
+
+.cat-button:hover {
+    background: #ffa726;
+}
+
+
+.cat-button:disabled {
+    cursor: default;
+
+    opacity: 0.7;
+}
+
+
+.vs {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* ----------------------------- */
+/* RESULT */
+/* ----------------------------- */
+
+
+#result {
+    min-height: 35px;
+
+    margin: 20px 0;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* ----------------------------- */
+/* BUTTONS */
+/* ----------------------------- */
+
+
+.next-button {
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+.next-button:hover {
+    background: #555;
+}
+
+
+.secondary-button {
+    display: block;
+
+    margin: 20px auto;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ddd;
+
+    color: #333;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.secondary-button:hover {
+    background: #ccc;
+}
+
+
+/* ----------------------------- */
+/* FINAL SCORE */
+/* ----------------------------- */
+
+
+.final-score {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+#final-score {
+    font-size: 60px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+#final-message {
+    font-size: 22px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ----------------------------- */
+/* ANSWER HISTORY */
+/* ----------------------------- */
+
+
+#answer-history {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 25px 0;
+
+    font-size: 30px;
+}
+
+
+/* ----------------------------- */
+/* MOBILE */
+/* ----------------------------- */
+
+
+@media (max-width: 750px) {
+
+    .game {
+        padding: 25px 15px;
+    }
+
+
+    h1 {
+        font-size: 32px;
+    }
+
+
+    .cats {
+        flex-direction: column;
+    }
+
+
+    .cat-card {
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+
+    .vs {
+        margin: -10px 0;
+    }
+
+
+    .game-info {
+        font-size: 16px;
+    }
+
+
+    .cat-card img {
+        height: 300px;
+    }
+
+}/* ============================= */
+/* CAT OF THE DAY */
+/* ============================= */
+
+#cat-of-the-day {
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#cat-of-the-day h2 {
+    margin-top: 0;
+
+    font-size: 30px;
+}
+
+
+.cat-unlocked {
+    font-size: 18px;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+#daily-cat-image {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    background: #f2f2f2;
+}
+
+
+#daily-cat-name {
+    font-size: 30px;
+
+    margin: 15px 0 5px;
+}
+
+
+#daily-cat-weight {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+
+#daily-cat-message {
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #666;
+
+    margin-top: 15px;
+}
+/* =========================
+   CAT COLLECTION
+========================= */
+
+#collection-screen h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#collection-progress {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.collection-rarity-section {
+    margin: 40px 0;
+}
+
+.collection-rarity-section h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.collection-cats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.collection-card {
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #f2f2f2;
+}
+
+.collection-card h4 {
+    margin: 10px 0 5px;
+    font-size: 17px;
+}
+
+.collection-card p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.locked-cat {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #e5e5e5;
+    font-size: 45px;
+}
+
+.locked-card {
+    opacity: 0.65;
+}
+
+
+/* =========================
+   RARITIES
+========================= */
+
+.rarity-common {
+    color: #4f8a4f;
+    font-weight: bold;
+}
+
+.rarity-uncommon {
+    color: #3b82c4;
+    font-weight: bold;
+}
+
+.rarity-rare {
+    color: #8a4fc4;
+    font-weight: bold;
+}
+
+.rarity-epic {
+    color: #d89b19;
+    font-weight: bold;
+}
+
+.rarity-legendary {
+    color: #d04444;
+    font-weight: bold;
+}
+
+#daily-cat-rarity {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+#daily-cat-collection-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
