@@ -8,7 +8,7 @@ const cats = [
     {
         name: "Peanut",
         image: "images/cat2.jpg",
-        weight: 2,
+        weight: 1.1,
         rarity: "common"
     },
     {
