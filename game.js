@@ -1699,7 +1699,7 @@ function checkInfiniteStreakReward() {
         return;
     }
 
-    if (streak === 0 || streak % 25 !== 0) {
+    if (streak === 0 || streak % 15 !== 0) {
         return;
     }
 
