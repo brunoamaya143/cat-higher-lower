@@ -578,7 +578,7 @@ const cats = [
     {
         name: "Reed, Sue, Johnny and Ben",
         image: "images/cat97.jfif",
-        weight: 5.6,
+        weight: 12.2,
         rarity: "rare"
     },
     {
