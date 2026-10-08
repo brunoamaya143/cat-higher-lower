@@ -254,7 +254,7 @@ const cats = [
     {
         name: "Smudge",
         image: "images/cat43.jfif",
-        weight: 6.4,
+        weight: 5.7,
         rarity: "common"
     },
     {
